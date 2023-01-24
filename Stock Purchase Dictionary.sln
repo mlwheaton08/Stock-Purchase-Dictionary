@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock Purchase Dictionary", "Stock Purchase Dictionary\Stock Purchase Dictionary.csproj", "{B3822219-EF3A-467A-ADD5-8BF41C55D961}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3822219-EF3A-467A-ADD5-8BF41C55D961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3822219-EF3A-467A-ADD5-8BF41C55D961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3822219-EF3A-467A-ADD5-8BF41C55D961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3822219-EF3A-467A-ADD5-8BF41C55D961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD5352D8-1D2F-426F-8695-ACE3A33FD6AD}
+	EndGlobalSection
+EndGlobal
