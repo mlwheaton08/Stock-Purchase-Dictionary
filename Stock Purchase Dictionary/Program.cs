@@ -1,4 +1,6 @@
-﻿Dictionary<string, string> stocks = new Dictionary<string, string>();
+﻿using System.Security.Cryptography.X509Certificates;
+
+Dictionary<string, string> stocks = new Dictionary<string, string>();
 
 stocks.Add("GM", "General Motors");
 stocks.Add("CAT", "Caterpillar");
@@ -27,24 +29,27 @@ purchases.Add((ticker: "AAPL", shares: 20, price: 30.06));
 // Iterate over the purchases and update the valuation for each stock
 
 // Does the company name key already exist in the report dictionary?
-// If it does, update the total valuation
-// If not, add the new key and set its value
+    // If it does, update the total valuation
+    // If not, add the new key and set its value
 
 Dictionary<string, double> totalStocks = new Dictionary<string, double>();
 
 foreach ((string ticker, int shares, double price) purchase in purchases)
 {
-    foreach (var stock in stocks)
+    double total = purchase.shares * purchase.price;
+    string stockName = purchase.ticker;
+
+    if (totalStocks.ContainsKey(purchase.ticker))
     {
-        if (purchase.ticker == stock.Key)
-        {
-            string stockName = stock.Value;
-            double total = purchase.shares * purchase.price;
-            totalStocks.Add(stockName, total);
-        }
+        totalStocks[stockName] = total;
+    }
+    else
+    {
+        totalStocks.Add(stockName, total);
     }
 }
 
+Console.WriteLine("Total of each stock purchased:\n");
 foreach (var stock in totalStocks)
 {
     Console.WriteLine($"{stock.Key}: {stock.Value}");
